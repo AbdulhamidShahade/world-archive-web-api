@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using WorldArchive.Domain.Models.Base;
+﻿using WorldArchive.Domain.Models.Base;
 
 namespace WorldArchive.Domain.Models
 {
