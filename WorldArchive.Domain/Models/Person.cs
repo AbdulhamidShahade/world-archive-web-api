@@ -10,6 +10,10 @@ namespace WorldArchive.Domain.Models
         public int? Height { get; set; }
         public abstract int Age { get; }
 
+        public int CityId { get; set; }
+        public City City { get; set; }
+
+
         //reversed: LastName + FirstName
         public abstract string GetFullName(bool reversed = false);
 

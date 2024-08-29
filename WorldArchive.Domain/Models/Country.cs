@@ -17,7 +17,8 @@ namespace WorldArchive.Domain.Models
         public List<string> TimeZones { get; set; }
 
 
-        public List<CountryLanguage> LanguagesSpokenByCountry { get; set; }
-        public List<City> CitiesByCountry { get; set; }
+        public List<CountryLanguage> Languages { get; set; }
+        public List<City> Cities { get; set; }
+        public List<Movie> Movies { get; set; }
     }
 }

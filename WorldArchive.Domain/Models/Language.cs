@@ -7,7 +7,7 @@ namespace WorldArchive.Domain.Models
         public string Name { get; set; }
         public int SpokenBy { get; set; }
 
-        public List<CountryLanguage> CountriesSpokenByLanguage { get; set; }
-        public List<MovieLanguage> MoviesByLanguage { get; set; }
+        public List<CountryLanguage> Countries { get; set; }
+        public List<MovieLanguage> Movies { get; set; }
     }
 }

@@ -22,5 +22,9 @@ namespace WorldArchive.Domain.Models
         {
             return (reversed) ? LastName + " " + FirstName : FirstName + " " + LastName;
         }
+
+
+        public List<MovieActor> Movies { get; set; }
+        public University University { get; set; }
     }
 }

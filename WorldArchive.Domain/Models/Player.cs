@@ -5,6 +5,7 @@ namespace WorldArchive.Domain.Models
     public class Player : Person
     {
 
+        public int SportId { get; set; }
         public Sport Sport { get; set; }
 
 

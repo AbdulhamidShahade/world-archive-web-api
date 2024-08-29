@@ -7,6 +7,6 @@ namespace WorldArchive.Domain.Models
         public string Name { get; set; }
 
 
-        public List<Country> CountriesByRegion { get; set; }
+        public List<Country> Countries { get; set; }
     }
 }

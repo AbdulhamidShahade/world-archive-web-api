@@ -10,6 +10,11 @@ namespace WorldArchive.Domain.Models
         public Country Country { get; set; }
 
 
-        public List<University> UniversitesByCity { get; set; }
+        public List<University> Universities { get; set; }
+        public List<Actor> Actors { get; set; }
+        public List<Actress> Actress { get; set; }
+        public List<Company> Companies { get; set; }
+        public List<Food> Foods { get; set; }
+        public List<Player> Players { get; set; }
     }
 }

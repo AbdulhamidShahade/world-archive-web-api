@@ -8,5 +8,6 @@ namespace WorldArchive.Domain.Models
     {
         public string Name { get; set; }
         public int NumberOfWorkers { get; set; }
+        public City City { get; set; }
     }
 }

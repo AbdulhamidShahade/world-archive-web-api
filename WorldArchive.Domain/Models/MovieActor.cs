@@ -2,7 +2,7 @@
 
 namespace WorldArchive.Domain.Models
 {
-    internal class MovieActor : EntityBase
+    public class MovieActor : EntityBase
     {
         public int MovieId { get; set; }
         public Movie Movie { get; set; }

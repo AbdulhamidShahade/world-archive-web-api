@@ -8,6 +8,6 @@ namespace WorldArchive.Domain.Models
         public string Description { get; set; }
 
 
-        public List<Player> PlayersBySport { get; set; }
+        public List<Player> Players { get; set; }
     }
 }
