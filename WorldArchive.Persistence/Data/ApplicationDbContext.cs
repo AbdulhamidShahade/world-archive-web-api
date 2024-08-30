@@ -38,7 +38,121 @@ namespace WorldArchive.Persistence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<Actor>()
+                .HasOne(u => u.University)
+                .WithMany(a => a.Actors)
+                .HasForeignKey(fk => fk.UniversityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Actor>()
+                .HasOne(c => c.City)
+                .WithMany(a => a.Actors)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Actress>()
+                .HasOne(u => u.University)
+                .WithMany(a => a.Actresses)
+                .HasForeignKey(fk => fk.UniversityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Actress>()
+                .HasOne(c => c.City)
+                .WithMany(a => a.Actress)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<City>()
+                .HasMany(u => u.Universities)
+                .WithOne(c => c.City)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<City>()
+                .HasMany(c => c.Companies)
+                .WithOne(c => c.City)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<City>()
+                .HasMany(f => f.Foods)
+                .WithOne(c => c.City)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);  
+
+            modelBuilder.Entity<City>()
+                .HasMany(p => p.Players)
+                .WithOne(c => c.City)
+                .HasForeignKey(fk => fk.CityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Country>()
+                .HasMany(m => m.Movies)
+                .WithOne(c => c.Country)
+                .HasForeignKey(fk => fk.CountryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Country>()
+                .HasOne(r => r.Region)
+                .WithMany(c => c.Countries)
+                .HasForeignKey(fk => fk.RegionId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CountryLanguage>()
+                .HasOne(c => c.Country)
+                .WithMany(l => l.Languages)
+                .HasForeignKey(fk => fk.CountryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CountryLanguage>()
+                .HasOne(l => l.Language)
+                .WithMany(c => c.Countries)
+                .HasForeignKey(fk => fk.LanguageId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieActor>()
+                .HasOne(a => a.Actor)
+                .WithMany(m => m.Movies)
+                .HasForeignKey(fk => fk.ActorId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieActor>()
+                .HasOne(m => m.Movie)
+                .WithMany(a => a.Actors)
+                .HasForeignKey(fk => fk.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieActress>()
+                .HasOne(m => m.Movie)
+                .WithMany(a => a.Actresses)
+                .HasForeignKey(fk => fk.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieActress>()
+                .HasOne(a => a.Actress)
+                .WithMany(m => m.Movies)
+                .HasForeignKey(fk => fk.ActressId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieLanguage>()
+                .HasOne(m => m.Movie)
+                .WithMany(l => l.Languages)
+                .HasForeignKey(fk => fk.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<MovieLanguage>()
+                .HasOne(l => l.Language)
+                .WithMany(m => m.Movies)
+                .HasForeignKey(fk => fk.LanguageId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Player>()
+                .HasOne(s => s.Sport)
+                .WithMany(p => p.Players)
+                .HasForeignKey(fk => fk.SportId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }
