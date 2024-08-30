@@ -7,6 +7,8 @@ namespace WorldArchive.Domain.Models
         public string Name { get; set; }
         public string CallingCode { get; set; }
         public string capital { get; set; }
+
+        public int RegionId { get; set; }
         public Region Region { get; set; }
         public int Area { get; set; }
         public string Flag { get; set; }
