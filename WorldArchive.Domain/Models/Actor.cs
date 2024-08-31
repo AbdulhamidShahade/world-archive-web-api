@@ -26,7 +26,7 @@ namespace WorldArchive.Domain.Models
 
         public List<MovieActor> Movies { get; set; }
 
-        public int UniversityId { get; set; }
-        public University University { get; set; }
+
+
     }
 }
