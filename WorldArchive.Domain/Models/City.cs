@@ -6,7 +6,10 @@ namespace WorldArchive.Domain.Models
     {
         public string Name { get; set; }
         public int Population { get; set; }
-        public Map Map { get; set; }
+        public string? GoogleMap { get; set; }
+        public string? OpenStreetMap { get; set; }
+
+        public int CountryId { get; set; }
         public Country Country { get; set; }
 
 
