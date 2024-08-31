@@ -7,6 +7,8 @@ namespace WorldArchive.Domain.Models
         public string Name { get; set; }
         public string CallingCode { get; set; }
         public string capital { get; set; }
+        public string? GoogleMap { get; set; }
+        public string? OpenStreetMap { get; set; }
 
         public int RegionId { get; set; }
         public Region Region { get; set; }
@@ -14,7 +16,6 @@ namespace WorldArchive.Domain.Models
         public string Flag { get; set; }
         public string CoatOfArms { get; set; }
         public int Population { get; set; }
-        public Map Maps { get; set; }
         public string StartOfWeek { get; set; }
         public List<string> TimeZones { get; set; }
 
