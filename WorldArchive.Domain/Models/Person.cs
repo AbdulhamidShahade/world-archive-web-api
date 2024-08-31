@@ -17,5 +17,9 @@ namespace WorldArchive.Domain.Models
         //reversed: LastName + FirstName
         public abstract string GetFullName(bool reversed = false);
 
+
+        public int UniversityId { get; set; }
+        public University University { get; set; }
+
     }
 }
