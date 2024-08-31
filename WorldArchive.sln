@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldArchive.Domain", "Worl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldArchive.Persistence", "WorldArchive.Persistence\WorldArchive.Persistence.csproj", "{B54EBF4D-6A0A-4474-B7DA-FC90CE2A3C37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldArchive.API", "WorldArchive.API\WorldArchive.API.csproj", "{3D43AB95-4CB4-424A-B009-429DF63D8176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B54EBF4D-6A0A-4474-B7DA-FC90CE2A3C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B54EBF4D-6A0A-4474-B7DA-FC90CE2A3C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B54EBF4D-6A0A-4474-B7DA-FC90CE2A3C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D43AB95-4CB4-424A-B009-429DF63D8176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D43AB95-4CB4-424A-B009-429DF63D8176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D43AB95-4CB4-424A-B009-429DF63D8176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D43AB95-4CB4-424A-B009-429DF63D8176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
